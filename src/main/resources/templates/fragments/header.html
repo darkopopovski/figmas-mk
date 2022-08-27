@@ -1,0 +1,52 @@
+
+<!-- Header -->
+<header id="header" class="transparent-nav" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <div class="container">
+
+        <div class="navbar-header">
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <a class="logo" th:href="@{/home}">
+                    <img src="./img/pngwing.com(3)(1).png" alt="logo" width="50px" height="100px">
+                </a>
+            </div>
+            <!-- /Logo -->
+
+            <!-- Mobile toggle -->
+            <button class="navbar-toggle">
+                <span></span>
+            </button>
+            <!-- /Mobile toggle -->
+        </div>
+
+        <!-- Navigation -->
+        <nav id="nav">
+            <ul class="main-menu nav navbar-nav navbar-right" style="display: flex;flex-direction: row;align-items: center;justify-content: center">
+                <li><a th:href="@{/home}">Home</a></li>
+
+
+                <th:block th:if="${#request.getRemoteUser()!=null}">
+                    <li>
+                    <li><a th:href="@{/logout}" class="btn btn-primary">Logout</a></li>
+                    </li>
+                    <li >
+                        <a>
+                            Welcome <th:block th:if="${#request.getRemoteUser()!=null}"
+                                              th:text="${#request.getRemoteUser()}" />
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${#request.getRemoteUser()==null}">
+                    <li><a th:href="@{/login}" class="btn btn-primary">Login</a></li>
+                    </li>
+                    <li><a th:href="@{/register}" class="btn btn-info">Register</a></li>
+                    </li>
+                </th:block>
+                <li><a th:href="@{/contact}">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- /Navigation -->
+
+    </div>
+</header>
+<!-- /Header -->
