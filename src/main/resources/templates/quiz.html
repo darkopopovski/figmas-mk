@@ -227,6 +227,15 @@
     <p id="result7" style="padding: 15px 15px 15px 15px; border:1px solid lightgreen; margin-top: 10px;">Answer 7</p>
 
     <p id="resultFinal" style="padding: 15px 15px 15px 15px; border:1px solid rgb(255, 91, 69); margin-top: 10px;">RESULT</p>
+
+
+    <div class="container text-center" style="opacity: 0;" id="for-it">
+      <h1 class="display-3 text-white">Congratulations you earned your certificate</h1>
+      <div class="container">
+        <img id="our-img" src="">
+      </div>
+    </div>
+
   </div>
 </div>
 <script>
@@ -314,30 +323,12 @@
     }
     document.getElementById("result7").innerHTML = string7;
     //////////////////////////////////////////////////////////////////////
-    var ele = document.getElementsByName('radio8');
-    let string8 = "";
-    for (i = 0; i < ele.length; i++) {
-      if (ele[i].checked)
-        string8 = ele[i].value + " ";
-    }
-    if (string8 === "It helps keep your heartbeat steady") {
-      parseInt(counter++);
-    }
-    document.getElementById("result8").innerHTML = string8;
-    //////////////////////////////////////////////////////////////////////
-    var ele = document.getElementsByName('radio9');
-    let string9 = "";
-    for (i = 0; i < ele.length; i++) {
-      if (ele[i].checked)
-        string9 = ele[i].value + " ";
-    }
-    if (string9.toLowerCase() === "Exercise regularly".toLowerCase()) {
-      parseInt(counter++);
-    }
-    document.getElementById("result9").innerHTML = string9;
-    console.log(counter);
 
     document.getElementById("resultFinal").innerHTML = "YOU HAVE SCORED PERFECTLY!"
+
+    document.getElementById("for-it").style.opacity = "100%";
+    document.getElementById("our-img").src = "/img/certificate.jpg";
+
   }
 </script>
 
