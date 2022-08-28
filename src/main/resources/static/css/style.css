@@ -716,6 +716,13 @@ textarea:focus {
     border-top: 1px solid #EBEBEB;
 }
 
+.my-card {
+    margin-top: 20px;
+    background: #007bb5;
+    color: white;
+    text-transform: uppercase;
+}
+
 
 /* -- Footer Logo -- */
 

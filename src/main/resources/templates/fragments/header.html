@@ -26,9 +26,10 @@
 
 
                 <th:block th:if="${#request.getRemoteUser()!=null}">
-                    <li>
+                    <li><a th:href="@{/courses}" class="btn btn-info">Courses</a></li>
+                    <li><a th:href="@{/quiz}" class="btn btn-danger">Quiz</a></li>
                     <li><a th:href="@{/logout}" class="btn btn-primary">Logout</a></li>
-                    </li>
+
                     <li >
                         <a>
                             Welcome <th:block th:if="${#request.getRemoteUser()!=null}"
